@@ -1,5 +1,6 @@
 import { IChildren } from "@/shared/types";
 import { appTitle } from "@/shared/utils";
+import "bootstrap/dist/css/bootstrap.min.css";
 import type { Metadata, Viewport } from "next";
 
 export const metadata: Metadata = {
@@ -17,9 +18,9 @@ export const viewport: Viewport = {
 
 const RootLayout = ({ children }: IChildren) => {
   return (
-    <html lang="en">
-      <body>
-        <main>{children}</main>
+    <html lang="en" className="h-100">
+      <body className="d-flex flex-column h-100 bg-light overflow-x-hidden overflow-y-auto">
+        <main className="flex-fill">{children}</main>
       </body>
     </html>
   );
